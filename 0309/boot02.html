@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 2일차 2번 파일</title>
+
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h3>부트스트랩의 타이포그라피</h3>
+    <div class="h1">제목 h1 ~ h1</div>
+    <div class="h2">제목 h2 ~ h2</div>
+    <div class="h3">제목 h3 ~ h3</div>
+    <div class="h4">제목 h4 ~ h4</div>
+    <div class="h5">제목 h5 ~ h5</div>
+    <div class="h6">제목 h6 ~ h6</div>
+
+    <p class="h1">제목 h1 ~ h1</p>
+    <p class="h2">제목 h2 ~ h2</p>
+    <p class="h3">제목 h3 ~ h3</p>
+    <p class="h4">제목 h4 ~ h4</p>
+    <p class="h5">제목 h5 ~ h5</p>
+    <p class="h6">제목 h6 ~ h6</p>
+
+    <p class="display-1">display-1 사용</p>
+    <p class="display-2">display-2 사용</p>
+    <p class="display-3">display-3 사용</p>
+    <p class="display-4">display-4 사용</p>
+    <p class="display-5">display-5 사용</p>
+    <p class="display-6">display-6 사용</p>
+
+    <br>
+
+    <h1>기본 제목 <small>작은 제목</small></h1>
+    <h2>기본 제목 <small>작은 제목</small></h2>
+    <h3>기본 제목 <small>작은 제목</small></h3>
+    <h4>기본 제목 <small>작은 제목</small></h4>
+    <h5>기본 제목 <small>작은 제목</small></h5>
+    <h6>기본 제목 <small>작은 제목</small></h6>
+
+    <br>
+
+    <h3>강조하고자 할 경우 사용하는 <mark>mark 태그</mark></h3>
+    <h3><span class="mark">형광펜</span>을 사용한 듯한 효과를 줌</h3>
+
+    <br>
+
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</abbr></p>
+
+    <br>
+
+    <p>blockquote 사용 방법 : </p>
+    <blockquote class="blockquote">
+      <p>인용된 부분에 대한 내용을 입력</p>
+      <footer class="blockquote-footer">어디서 인용했는지 표시할 때 사용</footer>
+    </blockquote>
+
+
+
+    <dl>
+      <dt>커피</dt>
+      <dd>아메리카노</dd>
+      <dd>카페라떼</dd>
+    </dl>
+  
+    <p>code : </p>
+    <p><code>var value = 100;</code></p>
+    <p><code>var numb1 = value + 100;</code></p>
+
+    <p>복사를 하려면 <kbd>ctrl + c</kbd>를 누릅니다.</p>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <h3>부트스트랩에서 제공하는 타이포그라피 클래스</h3>
+
+    <h4>.lead</h4>
+    <p>일반 문자를 사용 시</p>
+    <p class="lead">.lead 사용 시</p>
+
+    <h4>text-start, text-center, text-end</h4>
+    <p class="text-start">글자를 좌측 정렬</p>
+    <p class="text-center">글자를 중앙 정렬</p>
+    <p class="text-end">글자를 우측 정렬</p>
+
+    <h4>text-break</h4>
+    <div style="width: 200px; height: 50px; border: 1px solid salmon; padding: 5px; margin: 5px;">
+      <p>글자의 내용이 길어서 부모 태그의 영역을 벗어날 경우 어떻게 표시되는지 확인하기 위한 글자</p>
+    </div>
+    <div style="width: 200px; height: 50px; border: 1px solid salmon; padding: 5px; margin: 5px;">
+      <p class="text-break">글자의 내용이 길어서 부모 태그의 영역을 벗어날 경우 어떻게 표시되는지 확인하기 위한 글자</p>
+    </div>
+
+    <br><br>
+
+    <h4>.text-nowrap</h4>
+    <p>글자의 내용이 길어서 부모 태그의 영역을 벗어날 경우 어떻게 표시되는지 확인하기 위한 글자</p>
+    <p class="text-nowrap">글자의 내용이 길어서 부모 태그의 영역을 벗어날 경우 어떻게 표시되는지 확인하기 위한 글자</p>
+
+    <br>
+
+    <h4>.text-decoration-none</h4>
+    <a href="http://www.daum.net">다음 홈페이지</a>
+    <a href="http://www.daum.net" class="text-decoration-none">다음 홈페이지</a>
+
+    <br><br>
+
+    <h4>table, table-striped, table-hover</h4>
+
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+          <th>직업</th>
+          <th>성별</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>1</td>
+            <td>동글이</td>
+            <td>고양이</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>재롱이</td>
+            <td>말티즈</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>처키</td>
+            <td>다람쥐</td>
+            <td>암컷</td>
+          </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-hover table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+          <th>직업</th>
+          <th>성별</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>1</td>
+            <td>동글이</td>
+            <td>고양이</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>재롱이</td>
+            <td>말티즈</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>처키</td>
+            <td>다람쥐</td>
+            <td>암컷</td>
+          </tr>
+      </tbody>
+    </table>
+
+    <table class="table table-hover table-striped table-borderless table-dark">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+          <th>직업</th>
+          <th>성별</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>1</td>
+            <td>동글이</td>
+            <td>고양이</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>재롱이</td>
+            <td>말티즈</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>처키</td>
+            <td>다람쥐</td>
+            <td>암컷</td>
+          </tr>
+      </tbody>
+    </table>
+
+    <h4>반응형 테이블</h4>
+    <div class="tabel-responsive-md text-nowrap">
+      <table class="table table-hover table-striped table-borderless table-danger">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>직업</th>
+            <th>성별</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+            <th>테스트</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>1</td>
+              <td>동글이</td>
+              <td>고양이</td>
+              <td>수컷</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>재롱이</td>
+              <td>말티즈</td>
+              <td>수컷</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>처키</td>
+              <td>다람쥐</td>
+              <td>암컷</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+              <td>내용</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>table-sm</h4>
+    <table class="table table-sm table-hover table-striped table-borderless table-dark">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+          <th>직업</th>
+          <th>성별</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>1</td>
+            <td>동글이</td>
+            <td>고양이</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>재롱이</td>
+            <td>말티즈</td>
+            <td>수컷</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>처키</td>
+            <td>다람쥐</td>
+            <td>암컷</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

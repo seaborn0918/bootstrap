@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 5일차 1번</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  <style>
+    body { 
+      height: 1500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid mt-3">
+    <h3>Sticky Navbar</h3>
+    <p>내비게이션 바가 처음에는 중간에 위치하고 있다가 마우스 휠을 돌려서 화면이 아래로 내려가면 내비게이션 바의 위치가 상단에 고정되는 내비게이션 바</p>
+    <p>구형 브라우저에서는 동작되지 않을 수 있음</p>
+    <p>nav태그에 .sticky-top 클래스를 추가하여 사용</p>
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-warning sticky-top">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">Logo</a>
+      <ul class="navbar-nav me-0">
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="container my-4">
+    <h3>내비게이션 바 아래에 존재하는 컨텐츠 영역</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, deserunt et. Eveniet eligendi, atque quasi provident similique odio inventore suscipit nihil omnis distinctio minima quis sint voluptatibus voluptatum cum ipsum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, deserunt et. Eveniet eligendi, atque quasi provident similique odio inventore suscipit nihil omnis distinctio minima quis sint voluptatibus voluptatum cum ipsum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, deserunt et. Eveniet eligendi, atque quasi provident similique odio inventore suscipit nihil omnis distinctio minima quis sint voluptatibus voluptatum cum ipsum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, deserunt et. Eveniet eligendi, atque quasi provident similique odio inventore suscipit nihil omnis distinctio minima quis sint voluptatibus voluptatum cum ipsum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, deserunt et. Eveniet eligendi, atque quasi provident similique odio inventore suscipit nihil omnis distinctio minima quis sint voluptatibus voluptatum cum ipsum.</p>
+  </main>
+    
+  <hr>
+
+  <div class="container">
+    <h3>캐러셀</h3>
+    <!-- Carousel : 이미지를 슬라이드 시키는 방법 -->
+    <!-- 많은 캐러셀 라이브러리가 존재하지만 부트스트랩에서 간단한 형식의 캐러셀을 사용할 수 있음 -->
+    <!-- 부모 태그로 div를 사용하고 id값을 반드시 설정하고, .carousel, .slide 클래스를 사용 -->
+    <!-- 부모 div 태그에 사용자 속성인 data-bs-ride="carousel"을 추가함 -->
+  
+    <!-- 자식 태그로 3가지 영역을 사용함 -->
+    <!-- indicator 영역 -->
+    <!-- 부모 태그로 div 태그를 사용하고 .carousel-indicators 사용함 -->
+    <!-- 자식 태그로 button 태그를 사용하고, 사용자 속성인 data-bs-target="#캐러셀의 최상위 부모의 id값" data-bs-slide-to="번호"(0번부터 사용하고 slideshow 영역의 이미지 개수와 맞춰야 함)를 입력하여 사용 -->
+    <!-- 처음에 보여줄 이미지와 연동되는 버튼에 .active 클래스를 사용 -->
+  
+    <!-- slideshow 영역 -->
+    <!-- 부모 태그로 div 태그를 사용하고 .carousel-inner 클래스를 사용함 -->
+    <!-- 자식 태그로 div 태그를 사용하고 .carousel-item 클래스를 사용하며, 처음에 표시되는 부분에는 .active 클래스를 추가함-->
+    <!-- 자식 태그인 div 태그의 자식 태그로 img 태그를 사용하고 .d-block, w-100을 사용하여 화면에 표시되는 이미지를 출력함 -->
+  
+    <!-- control 영역 -->
+    <!-- button 태그를 사용하고 .carousel-control-prev 혹은 .carousel-control-next를 사용함 -->
+    <!-- button 태그에 사용자 속성인 data-bs-target="#캐러셀의 최상위 부모의 id값" data-bs-slide="prev"나 data-bs-slide="next"로 설정함  -->
+    <!-- button 태그의 자식 태그로 span 태그를 사용하고 .carousel-control-prev-icon 혹은 .carousel-control-next-icon을 사용함 -->
+    <div id="ad-carousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- 인디케이터 -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2"></button>
+      </div>
+      <!-- 슬라이드쇼 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./001.jpg" alt="" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="./002.jpg" alt="" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="./003.jpg" alt="" class="d-block w-100">
+        </div>
+      </div>
+      <!-- 컨트롤 -->
+      <div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>      
+    </div>
+  
+    <br>
+  
+    <h4>캐러셀에 캡션 넣기</h4>
+    <!-- 슬라이드쇼 영역의 carousel-item의 자식 태그로 div 태그를 추가하고 .carousel-caption 클래스를 사용 -->
+    <!-- 해당 태그의 자식태그로 문자를 표현하는 태그를 사용 -->
+    <!-- corousel-item 사용자 속성 data-bs-interval="시간"을 사용하여 슬라이드 시간을 조절할 수 있음, 기본값은 5초, 1/1000초 계산함 -->
+    <!-- 부모인 div에 .carousel-fade를 추가하면 fade in, fade out 방식으로 이미지 변경 -->
+    <div id="mycarousel2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <!-- 인디케이터 -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mycarousel2" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mycarousel2" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mycarousel2" data-bs-slide-to="2"></button>
+      </div>
+      <!-- 슬라이드쇼 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="./001.jpg" alt="" class="d-block w-100">
+          <div class="carousel-caption">
+            <h4>첫번째 이미지</h4>
+            <p>캐러셀의 첫번째 이미지에 사용된 설명문</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000"">
+          <img src="../resource/images/002 - 복사본.jpg" alt="" class="d-block w-100">
+          <div class="carousel-caption">
+            <h4>두번째 이미지</h4>
+            <p>캐러셀의 첫번째 이미지에 사용된 설명문</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000"">
+          <img src="./003.jpg" alt="" class="d-block w-100">
+          <div class="carousel-caption">
+            <h4>세번째 이미지</h4>
+            <p>캐러셀의 첫번째 이미지에 사용된 설명문</p>
+          </div>
+        </div>
+      </div>
+      <!-- 컨트롤 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mycarousel2" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container my-4">
+    <h3>모달창</h3>
+    <!-- Modal : 팝업창과 동일한 기능을 가지고 있는 영역, 실제로는 현재 페이지의 일부분이지만 팝업창처럼 보이도록 디자인된 영역 -->
+    <!-- 보통 모달창 영역을 출력하기 위한 버튼과 실제 화면을 보여주기 위한 div 영역으로 나누어 짐 -->
+    <!-- button 태그에 사용자 속성인 data-bs-toggle="modal", data-bs-target="#실제 보여줄 영역의 id값 설정" -->
+    <!-- div 태그에 .modal 클래스를 사용하고, id값을 설정함 -->
+    <!-- 자식 태그로 div 태그를 사용하고 .modal-dialog 클래스를 사용함 -->
+    <!-- modal-dialog의 자식 태그로 div 태그를 사용하고, .modal-content 클래스를 사용함 -->
+    <!-- modal-content의 자식 태그로 3개(header, body, footer)의 div 태그를 사용함 -->
+
+    <!-- header -->
+    <!-- 모달창의 제목 부분으로 사용딤 -->
+    <!-- div 태그를 사용하고 .modal-header 클래스를 사용함 -->
+    <!-- 자식 태그로 다른 태그를 사용하면 됨 -->
+    <!-- 보통 h3, h4 태그를 사용하고 .modal-header 클래스를 적용함 -->
+    <!-- 나머지 필요한 내용은 p 태그를 사용 -->
+
+    <!-- body -->
+    <!-- 모달창에 표현할 내용이 들어가는 영역 -->
+    <!-- div 태그를 사용하고, .modal-body 클래스를 사용함 -->
+    <!-- body 부분에 필요한 태그를 사용하면 됨 -->
+
+    <!-- footer -->
+    <!-- 모달창에서 마지막에 들어가는 영역으로 보통 버튼을 배치함 -->
+    <!-- div 태그를 사용하고, .modal-footer 클래스를 사용함 -->
+    <!-- 닫기 버튼을 사용시 button 태그를 사용하고 사용자 속성 data-bs-dismiss="modal"을 설정함 -->
+
+    <!-- 최상위 보모인 div에 .fade 클래스 추가 시 애니메이션이 추가됨 -->
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">클릭시 모달창 열기</button>
+    </div>
+    <div class="modal fade" id="mymodal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">모달창 제목</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>모달창의 내용 부분</p>
+            <p>입력하고 싶은 내용을 입력하면 됨</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <h4>모달창 사이즈, 전체 크기 모달창, 화면 중앙 표시</h4>
+    <!-- modal-dialog 에 .modal-sm, .modal-lg, .modal-xl 을 추가하여 사용 -->
+    <!-- 전체 크기의 모달창은 modal-dialog 에  .modal -fullscreen 클래스를 추가하여 사용 -->
+    <!-- 전체 크기 모달창 사용 시 반응형 웹을 적용할 수 있음 -->
+    <!-- .modal-fullscreen-크기-down을 사용, 크기는 sm, md, lg, xl, xxl이 있음 -->
+    <!-- modal-dialog에 .modal-dialog-centered 클래스 추가 시 화면 중앙에 표시되는 모달창이 출력됨 -->
+    <div>
+      <div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-sm">작은 크기 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-normal">기본 크기 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-lg">큰 크기 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-xl">더 큰 크기 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-full">전체 크기 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-center">화면 중앙 표시</button>
+      </div>
+      <div class="modal fade" id="myModal-sm">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">작은모달창 제목</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>모달창 내용</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal-normal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">기본 모달창 제목</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>모달창 내용</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>   
+        </div>     
+      </div>
+      <div class="modal fade" id="myModal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">큰 모달창 제목</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>모달창 내용</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal-xl">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">더 큰 모달창 제목</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>모달창 내용</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal-full">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">모달창 제목</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>모달창 내용</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal-center">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">화면 중앙 출력 모달창 제목</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>모달창 내용</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h4>모달창 스크롤</h4>
+    <!-- modal-dialig에 .modal-dialog-scrollable 추가 시 모달창 내에서 스크롤이 가능함 -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-noscroll">스크롤 미지원</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-scroll">스크롤 지원</button>
+    <div class="modal fade" id="myModal-noscroll">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">스크롤이 없는 모달창</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal-scroll">
+      <div class="modal-dialog modal-sm modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">스크롤이 없는 모달창</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequuntur sit inventore officia quidem, nemo aliquam? Corporis nisi aperiam quod quas laboriosam qui maxime facilis libero praesentium, quae nobis molestias.</p>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

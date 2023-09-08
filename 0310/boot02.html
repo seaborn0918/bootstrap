@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 3일차 2번파일</title>
+  
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  
+</head>
+<body>
+  <div class="container my-4">
+    <h3>부트스트랩의 form 사용</h3>
+    <h4>기본 input과 부트스트랩의 input</h4>
+    <div>
+      <div class="my-3">
+        <label for="user-id">사용자 id : </label>
+        <input type="text" id="user-id" placeholder="기본 input 태그">
+      </div>
+      <div class="my-3">
+        <label for="user-name" class="form-label">사용자 이름 : </label>
+        <input type="text" class="form-control" id="user-name" placeholder="부트스트랩의 input 태그">
+      </div>
+      <div class="my-3">
+        <label for="comment1">메모 : </label>
+        <textarea name="comment1" id="comment1" cols="30" rows="10">기본 textarea</textarea>
+      </div>
+      <div class="my-3">
+        <label for="comment2" class="form-label">메모 : </label>
+        <textarea name="comment2" id="comment2" cols="30" rows="10" class="form-control">부트스트랩의 textarea</textarea>
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <h4>부트스트랩의 form을 이용한 로그인 페이지 예제</h4>
+      <br>
+      <div class="row">
+        <div class="col-4 mx-auto border rounded">
+          <form action="">
+            <div class="my-3">
+              <label for="user-email" class="form-label">User Email  : </label>
+              <input type="text" class="form-control" id="user-email" placeholder="email 주소를 입력하세요">
+            </div>
+            <div class="my-3">
+              <label for="user-pw" class="form-label">User Password : </label>
+              <input type="password" class="form-control" id="user-pw" placeholder="비밀번호를 입력하세요">
+            </div>
+            <div class="my-3 form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="remeber">Remember me
+              </label>
+            </div>
+            <div class="my-3 d-grid gap-2">
+              <button type="submit" class="btn btn-primary">로그인</button>
+              <button type="button" class="btn btn-secondary">회원가입</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <h4>inline 방식 form 사용</h4>
+      <form action="">
+        <div class="row border rounded py-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="email을 입력해주세요">
+          </div>
+          <div class="col">
+            <input type="password" class="form-control" placeholder="비밀번호를 입력해주세요">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="입력하세요">
+          </div>
+          <div class="col d-grid">
+            <button type="button" class="btn btn-primary">로그인</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <br>
+    
+    <div>
+      <h4>disabled, readonly, plaintext</h4>
+
+      <div>
+        <input type="text" class="form-control" placeholder="기본 부트스트랩 input">
+        <input type="text" class="form-control" placeholder="disabled 상태" disabled>
+        <input type="text" class="form-control" placeholder="readonly 상태" readonly>
+        <input type="text" class="form-control-plaintext" placeholder="plaintext input 태그">        
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <h4>label 사용</h4>
+      <div>
+        <div class="my-3">
+          <label for="" class="form-label">부트스트랩의 input과 함께 사용하는 label</label>
+          <input type="text" class="form-control" placeholder="기본 label은 form-label 사용">
+        </div>
+
+        <div class="my-3">
+          <div class="form-check">
+            <label for="" class="form-check-label">
+              <input type="checkbox" class="form-check-input" checked> 체크 옵션 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="chk2">
+            <label for="chk2" class="form-check-label">체크 옵션2</label>
+            <!-- 체크박스가 먼저 오려면 라벨을 뒤로 적음. input과 라벨태그를 따로 쓸 때는 id(for) 적어야함 -->
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="chk3" disabled>
+            <label for="chk3" class="form-check-label">체크 옵션3</label>
+          </div>
+        </div>
+
+        <div class="my-3">
+          <div class="form-check">
+            <label for="ra1" class="form-check-label"> 
+              <input type="radio" name="radio1" class="form-check-input" id="ra1" checked>라디오 옵션 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="radio1" class="form-check-input" id="ra2">
+            <label for="ra2" class="form-check-label"> 라디오 옵션 2 </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="radio1" class="form-check-input" id="ra3" disabled>
+            <label for="ra3" class="form-check-label"> 라디오 옵션 3 </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+    
+    <div>
+      <h4>form-text, file-input, colorp-icker</h4>
+      <div class="my-3">
+        <label for="" class="form-label">글자 입력 : </label>
+        <input type="text" class="form-control">
+        <p>input 태그 아래의 설명글</p>
+      </div>
+      <div class="my-3">
+        <label for="" class="form-label">글자 입력 : </label>
+        <input type="text" class="form-control">
+        <div class="form-text">input 태그 아래의 설명글</div>
+      </div>
+
+      <div class="my-3">
+        <input type="file">
+        <input type="file" class="form-control">
+      </div>
+      <div class="my-3">
+        <input type="color" value="#CCCCCC">
+        <input type="color" value="#CCCCCC" class="form-control form-control-color">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container my-4">
+    <h3>select box</h3>
+    <div class="my-3">
+      <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="my-3">
+      <select name="" id="" class="form-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="my-3">
+      <select name="" id="" class="form-select form-select-sm">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="my-3">
+      <select name="" id="" class="form-select form-select-lg">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="my-3">
+      <select name="" id="" class="form-select" size="3" multiple>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <br>
+
+    <h4>datalist</h4>
+    <!-- input list 와 데이터리스트 id가 같아야한다. -->
+    <div class="my-3">
+      <input type="text" class="form-control" list="datalist">
+      <datalist id="datalist">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </datalist>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container my-4">
+    <h4>inline checkbox, inline radio, switch</h4>
+    <div class="my-3">
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-inline" id="check1" checked >
+        <label for="check1" class="form-check-label">체크 1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-inline" id="check2">
+        <label for="check2" class="form-check-label">체크 2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-inline" id="check3" disabled>
+        <label for="check3" class="form-check-label">체크 3</label>
+      </div>
+    </div>
+
+    <div class="my-3">
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-inline" name="radio2" id="radio1" checked>
+        <label for="ra1" class="form-check-label">라디오 1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-inline" name="radio2" id="radio2">
+        <label for="radio2" class="form-check-label">라디오 2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio"  class="form-check-inline" name="radio2" id="radio3" disabled>
+        <label for="radio3" class="form-check-label">라디오3</label>
+      </div>
+    </div>
+    <div class="my-3">
+      <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" name="" id="switch">
+        <label for="switch" class="form-check-label">토글 스위치</label>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container my-4">
+    <h3>range 사용하기</h3>
+    <div>
+      <label for="" class="form-label">마우스 감도 : </label>
+      <input type="range" class="form-range" min="0" max="10" value="5" step="1">
+    </div>
+  </div>
+
+    <hr>
+
+  <div class="container my-4">
+      <h3>floating label 사용하기</h3>
+      <!-- floating label :  기본 부트스트랩 input 사용시 label을 input 태그 위에 위치하도록 하고 있음, floating label을 사용시 input 태그안에 label이 존재하고 테이터를 입력시 label이 작아지면서 입력된 데이터 위에 위치함 -->
+      <!-- intput 태그과 label 태그의 부모인 .div에 .form-floating을 추가하여 사용함 -->
+
+    <div class="my-3">
+      <label for="input1" class="form-label">기본 형태의 label</label>
+      <input type="text" class="form-control" id="input1" placeholder="기본 형태의 label">
+    </div>
+    <div class="my-3 form-floating">
+      <input type="text" class="form-control" id="input2" placeholder="form-label 사용">
+      <label for="input2">floating label을 적용</label>
+    </div>
+
+    <div class="my-3 form-floating">
+      <textarea id="comment3" cols="30" rows="10" class="form-control" placeholder="#"></textarea>
+      <label for="comment3">flating label이 적용된 textarea</label>
+    </div>
+
+    <div class="my-3 form-floating">
+      <select name="" id="sel1" class="form-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <label for="sel1">select list</label>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <h4>기본 input group</h4>
+    <div class="my-3">
+      <div class="input-group">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" placeholder="이름을 입력하세요">
+      </div>
+    </div>
+    <div class="my-3">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="이메일을 입력하세요">
+        <span class="input-group-text">@bitc.com</span>
+      </div>
+    </div>
+    <div class="my-3">
+      <div class="input-group input-group-sm my-2">
+        <span class="input-group-text">small</span>
+        <input type="text" class="form-control" placeholder="작은 크기의 input-group">
+      </div>
+      <div class="input-group input-group my-2">
+        <span class="input-group-text">basic</span>
+        <input type="text" class="form-control" placeholder="기본 크기의 input-group">
+      </div>
+      <div class="input-group input-group-lg my-2">
+        <span class="input-group-text">large</span>
+        <input type="text" class="form-control" placeholder="큰 크기의 input-group">
+      </div>
+    </div>
+
+    <h4>input-group에 button, checkbox, radio, mluti-input-group</h4>
+    <div class="my-3">
+      <div class="my-2 input-group">
+        <span class="input-group-text">첫번째</span>
+        <span class="input-group-text">두번째</span>
+        <input type="text" class="form-control" placeholder="헤더 부분 여러 개 넣기">
+      </div>
+      <div class="my-2 input-group">
+        <span class="input-group-text">처음</span>
+        <input type="text" class="form-control" placeholder="앞뒤에 넣기">
+        <span class="input-group-text">마지막</span>
+      </div>
+      <div class="my-2 input-group">
+        <span class="input-group-text">input을 여러 개 넣기</span>
+        <input type="text" class="form-control" placeholder="첫번째 textbox">
+        <input type="text" class="form-control" placeholder="두번재 textbox">
+      </div>      
+    </div>
+    <!-- input group 버튼 -->
+    <div class="my-3">
+      <div class="input-group my-2">
+        <button type="button" class="btn btn-primary">버튼</button>
+        <input type="text" class="form-control" placeholder="입력하세요">
+      </div>
+      <div class="input-group my-2">
+        <input type="text" class="form-control" placeholder="input 먼저">
+        <button type="button" class="btn btn-outline-primary">확인 버튼</button>
+        <button type="button" class="btn btn-outline-success">취소 버튼</button>
+      </div>
+    </div>
+    <!-- input group 체크박스, 라디오 -->
+    <div class="my-3">
+      <div class="input-group my-2">
+        <div class="input-group-text">
+          <input type="checkbox" class="form-check-input">
+        </div>
+        <input type="text" class="form-control" placeholder="checkbox와 함께 사용">
+      </div>
+      <div class="input-group my-2">
+        <div class="input-group-text">
+          <input type="radio" class="form-check-input">
+        </div>
+        <input type="text" class="form-control" placeholder="radio와 함께 사용">
+      </div>
+      <br>
+      <h4>드랍다운 버튼 함께 사용하기</h4>
+      <div class="my-3">
+        <div class="input-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="dropdown-item">메뉴1</a></li>
+            <li><a href="#" class="dropdown-item">메뉴2</a></li>
+            <li><a href="#" class="dropdown-item">메뉴3</a></li>
+            <li><a href="#" class="dropdown-item">메뉴4</a></li>
+          </ul>
+          <input type="text" class="form-control" placeholder="드랍다운 버튼을 사용하는 input-group">
+        </div>
+      </div>
+    </div>
+
+
+    
+
+  </div>
+
+  
+</body>
+</html>

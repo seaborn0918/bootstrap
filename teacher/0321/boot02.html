@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제 2</title>
+
+  <link rel="stylesheet" href="C:\smart505\bootstrap\resource\css\bootstrap.css">
+  <script src="C:\smart505\bootstrap\resource\js/bootstrap.bundle.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <style>
+    nav i, nav a {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-secondary fixed-top">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand text-white"><i class="bi bi-house-fill"></i> Logo</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-globe-asia-australia"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-person-fill"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-envelope-fill"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"><i class="bi bi-bell-fill"></i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">One new friend request</a></li>
+            <li><a class="dropdown-item" href="#">John Doe posted on your wall</a></li>
+            <li><a class="dropdown-item" href="#">Jane likes your post</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="">
+        <img class="rounded-circle" src="../resource/images/avatar2.png" alt="" style="width: 25px;">
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="margin-top: 70px">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card border-0 shadow px-2 mb-3">
+          <div class="card-body p-2">
+            <h4 class="card-title text-center">My Profile</>
+          </div>
+          <img class="card-img-top rounded-circle d-block mx-auto p-2 w-50" src="../resource/images/avatar3.png" alt="Card image">
+          <hr>
+          <div class="card-body p-2">
+            <p class="card-text"><i class="bi bi-pencil-fill"></i> Designer, UI</p>
+            <p class="card-text"><i class="bi bi-house-fill"></i> London, UK</p>
+            <p class="card-text"><i class="bi bi-cup-hot-fill"></i> April 1, 1988</p>
+          </div>
+        </div>
+        
+        <div class="accordion mb-3" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="bi bi-alexa me-2"></i> My Groups</button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Some text..</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="bi bi-calendar-check-fill me-2"></i>My Events</button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>Some other text..</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="bi bi-people-fill me-2"></i>My Photos</button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row my-2">
+                  <div class="col-sm">
+                    <img class="w-100" src="../resource/images/lights.jpg" alt="">
+                  </div>
+                  <div class="col-sm">
+                    <img class="w-100" src="../resource/images/nature.jpg" alt="">
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col-sm">
+                    <img class="w-100" src="../resource/images/mountains.jpg" alt="">
+                  </div>
+                  <div class="col-sm">
+                    <img class="w-100" src="../resource/images/forest.jpg" alt="">
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col-sm">
+                    <img class="w-100" src="../resource/images/nature.jpg" alt="">
+                  </div>
+                  <div class="col-sm">
+                    <img class="w-100" src="../resource/images/snow.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow px-2 mb-3">
+          <div class="card-body p-2">
+            <p>Interests</p>
+            <p class="m-0">
+              <span class="badge bg-dark">News</span>
+              <span class="badge bg-dark">W3S</span>
+              <span class="badge bg-dark">Labels</span>
+              <span class="badge bg-dark">Games</span>
+            </p>
+            <p class="m-0">
+              <span class="badge bg-secondary">Friends</span>
+              <span class="badge bg-secondary">Games</span>
+              <span class="badge bg-secondary">Friends</span>
+              <span class="badge bg-secondary">Food</span>
+            </p>
+            <p class="m-0">
+              <span class="badge bg-secondary bg-opacity-75 text-dark">Design</span>
+              <span class="badge bg-secondary bg-opacity-50 text-dark">Art</span>
+              <span class="badge bg-secondary bg-opacity-25 text-dark">Photos</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="alert alert-success alert-dismissible fade show">
+          <div class="clearfix">
+            <p class="float-start"><strong>Success!</strong></p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></butto>
+          </div>
+          <p>
+            This alert box could indicate a successful or positive action.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-sm-7">
+        <div class="rounded shadow py-2 px-3 mb-3">
+          <h6>Social Media template by bitc fullstack class 505</h6>
+          <div class="">
+            <input type="text" class="form-control" value="Status: Feeling Blue">
+          </div>
+          <div class="my-2">
+            <button type="button" class="btn btn-secondary"><i class="bi bi-pencil-fill"></i> Post</button>
+          </div>
+        </div>
+
+        <div class="rounded shadow py-2 px-3 mb-3">
+          <div class="row mt-3">
+            <div class="col-sm d-flex align-items-center">
+              <img class="rounded-circle me-3" src="../resource/images/avatar2.png" alt="Cinque Terre" style="width: 60px;">
+              <h4>John Doe</h4>
+            </div>
+            <div class="col-sm">
+              <p class="text-end">1 min</p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="row">
+              <div class="col-sm">
+                <img class="w-100" src="../resource/images/lights.jpg" alt="">
+              </div>
+              <div class="col-sm">
+                <img class="w-100" src="../resource/images/nature.jpg" alt="">
+              </div>
+            </div>
+            <div class="my-2">
+              <button type="button" class="btn btn-secondary"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
+              <button type="button" class="btn btn-secondary"><i class="bi bi-chat-fill"></i> Comment</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded shadow py-2 px-3 mb-3">
+          <div class="row m t-3">
+            <div class="col-sm d-flex align-items-center">
+              <img class="rounded-circle me-3" src="../resource/images/avatar5.png" alt="Cinque Terre" style="width: 60px;">
+              <h4>John Doe</h4>
+            </div>
+            <div class="col-sm">
+              <p class="text-end">1 min</p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="row">
+            </div>
+            <div class="my-2">
+              <button type="button" class="btn btn-secondary"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
+              <button type="button" class="btn btn-secondary"><i class="bi bi-chat-fill"></i> Comment</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded shadow py-2 px-3 mb-3">
+          <div class="row mt-3">
+            <div class="col-sm d-flex align-items-center">
+              <img class="rounded-circle me-3" src="../resource/images/avatar6.png" alt="Cinque Terre" style="width: 60px;">
+              <h4>John Doe</h4>
+            </div>
+            <div class="col-sm">
+              <p class="text-end">1 min</p>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <p>Have you seen this?</p>
+            <div class="row">
+              <div class="col-sm">
+                <img class="w-100" src="../resource/images/nature.jpg" alt="">
+              </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="my-2">
+              <button type="button" class="btn btn-secondary"><i class="bi bi-hand-thumbs-up-fill"></i> Like</button>
+              <button type="button" class="btn btn-secondary"><i class="bi bi-chat-fill"></i> Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card border-0 shadow px-2 text-center mb-3">
+          <div class="card-body p-2">
+            <p class="card-title">Upcoming Events:</p>
+          </div>
+          <img class="card-img-top d-block mx-auto  p-2" src="../resource/images/forest.jpg" alt="Card image">
+          <div class="card-body p-2">
+            <h6 class="card-title fw-bold">Holiday</h6>
+            <p class="card-text">Friday 15:00</p>
+            <div class="d-grid">
+              <button type="button" class="btn btn-light">Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow px-2 text-center mb-3">
+          <div class="card-body p-2">
+            <p class="card-title">Friend Request</p>
+          </div>
+          <img class="card-img-top d-block mx-auto p-2 w-50" src="../resource/images/avatar6.png" alt="Card image">
+          <div class="card-body p-2">
+            <h6 class="card-title fw-bold">Holiday</h6>
+            <p class="card-text">Friday 15:00</p>
+            <div class="d-grid">
+              <div class="btn-group">
+                <button type="button" class="btn btn-success opacity-50"><i class="bi bi-check"></i></button>
+                <button type="button" class="btn btn-danger opacity-50"><i class="bi bi-x"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid text-center bg-dark py-5">
+    <p>made by bitc fullstack class 505</p>
+  </footer>
+</body>
+</html>

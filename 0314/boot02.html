@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 4일차 2번</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container my-4">
+    <h3>Navs</h3>
+    <!-- navs : 메뉴로 많이 사용할 수 있는 버튼의 모임을 부트스트랩에서 미리 디자인해 놓음 -->
+    <!-- ul 태그에 .nav 클래스를 사용하고, li 태그에 .nav-item 클래스를 사용하고, a태그에 .nav-link 클래스를 사용하여 구현함 -->
+    <!-- a 태그에 .active/.disabled 클래스를 사용하여 활성/비활성을 표현함 -->
+    <div>
+      <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">메뉴 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link disabled">메뉴 3</a></li>
+      </ul>
+    </div>
+    <br>
+    <div>
+      <h4>navs 정렬, 세로 navs</h4>
+      <!-- ul 태그에 .justify-content-center, .justify-content-end 사용 시 중앙정렬 및 우측정렬 사용 -->
+      <!-- ul 태그에 .flex-column 클래스 사용 시 세로 navs로 표현 -->
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+      </ul>
+      <ul class="nav justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+      </ul>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+      </ul>
+    </div>
+    <br>
+    <h4>navs 모양 설정</h4>
+    <!-- ul 태그에 .nav-tabs, .nave-pills 추가 시 navs의 모양을 변경할 수 있음 -->
+    <!-- ul 태그에 .nav-justified 추가 시 하나의 라인 전체를 사용하는 메뉴로 사용 가능 -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+    </ul>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+    </ul>
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+    </ul>
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">메뉴 3</a></li>
+    </ul>
+    <br>
+    <h4>navs에 드랍다운 버튼 사용</h4>
+    <!-- li 태그에 dropdown 클래스를 추가하고 자식 태그로 a 태그와 ul 태그를 추가함 -->
+    <!-- a 태그는 button 태그 대신 사용하고 사용자 속성인 data-bs-toggle="dropdown"을 추가하고 .dropdown-toggle 클래스를 사용함-->
+    <!-- ul 태그는 기존 dropdown 버튼과 동일하게 .dropdown-menu클래스를 사용 -->
+    <div>
+      <ul class="nav nav-tabs">
+        <li class="nav-item"><a href="#" class="nav-link active">메뉴 1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 2</a></li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="dropdown-item">서브메뉴 1</a></li>
+            <li><a href="#" class="dropdown-item">서브메뉴 2</a></li>
+            <li><a href="#" class="dropdown-item">서브메뉴 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link">메뉴 4</a></li>
+      </ul>
+    </div>
+    <br>
+    <h4>toggle navs/dynamic tabs</h4>
+    <!-- dynamic tabs : navs를 이용하여 메뉴 클릭 시 지정한 영역이 펼쳐지는 형태의 메뉴 -->
+    <!-- 서브 메뉴로 사용하기 좋음 -->
+    <!-- 메뉴를 표시하기 위한 ul 태그와 클릭 시 화면이 표시될 div 영역을 설정함 -->
+    <!-- ul 태그의 자손 중 a 태그에 사용자 속성 data-bs-toggle="tab"을 추가하고 href 속성에 열고 싶은 영역의 id 값을 입력함 -->
+    <!-- 메뉴 클릭 시 표시될 영역인 div 태그는 부모 태그와 자식 태그로 나누어짐 -->
+    <!-- 부모 div 태그에 .tab-content 클래스를 사용함 -->
+    <!-- 자식 div 태그에 .tab-pane 클래스를 사용하고 처음 열고 있을 영역에 .active, 나중에 클릭 시 열릴 영역은 fade를 사용함-->
+    <!-- 자식 div 태그에는 반드시 id 속성을 사용해야 함(id 속성값이 navs 메뉴의 a 태그의 href 속성값으로 사용됨) -->
+    <div>
+      <ul class="nav nav-tabs">
+        <li class="nav-item"><a href="#home" class="nav-link active" data-bs-toggle="tab">홈</a></li>
+        <li class="nav-item"><a href="#menu1" class="nav-link" data-bs-toggle="tab">메뉴 1</a></li>
+        <li class="nav-item"><a href="#menu2" class="nav-link" data-bs-toggle="tab">메뉴 2</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane show active container fade" id="home">
+          <h4>홈</h4>
+          <p>메뉴의 홈 클릭 시 열리는 영역</p>
+        </div>
+        <div class="tab-pane container fade" id="menu1">
+          <h4>메뉴 1</h4>
+          <p>메뉴의 메뉴1 클릭시 열리는 영역</p>
+        </div>
+        <div class="tab-pane container fade" id="menu2">
+          <h4>메뉴 2</h4>
+          <p>메뉴의 메뉴2 클릭시 열리는 영역</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 3일차</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5 mb-4">
+    <h3>display 사용하기</h3>
+    <h4>div 태그를 inline으로 만들기</h4>
+    <div>
+      <div class="box border bg-primary d-inline">block 타입</div>
+      <div class="box border bg-success d-inline">block 타입</div>
+      <div class="box border bg-danger d-inline">block 타입</div>
+    </div>
+
+    <br>
+
+    <h4>span 태그를 block으로 만들기</h4>
+    <div>
+      <span class="box border bg-danger d-block">inline 타입</span>
+      <span class="box border bg-success d-block">inline 타입</span>
+      <span class="box border bg-primary d-block">inline 타입</span>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <h3>border 사용하기</h3>
+    <div class="d-flex">
+      <div class="box border mx-2"></div>
+    <div class="box bg-info border border-0 mx-2"></div>
+      <div class="box border border-1 mx-2"></div>
+      <div class="box border border-2 mx-2"></div>
+      <div class="box border border-3 mx-2"></div>
+      <div class="box border border-4 mx-2"></div>
+      <div class="box border border-5 mx-2"></div>
+    </div>
+    <br>
+    <div class="d-flex">
+      <div class="box border mx-2">방향넣기 기본</div>
+      <div class="box border-top mx-2">border-top</div>
+      <div class="box border-end mx-2">border-end</div>
+      <div class="box border-bottom mx-2">border-bottom</div>
+      <div class="box border-start mx-2">border-start</div>
+      <div class="box border border-top-0 mx-2">border-top-0</div>
+    </div>
+  
+    <br>
+  
+    <div class="d-flex">
+      <div class="box border mx-2">테두리선 테마 색상 기본</div>
+        <div class="box border border-primary mx-2">border-primary</div>
+        <div class="box border border-secondary mx-2">border-secondary</div>
+        <div class="box border border-success mx-2">border-success</div>
+        <div class="box border border-info mx-2">border-info</div>
+        <div class="box border border-warning mx-2">border-warning</div>
+        <div class="box border border-danger mx-2">border-danger</div>
+        <div class="box border border-light mx-2">border-light</div>
+        <div class="box border border-dark mx-2">border-dark</div>
+        <div class="p-3 bg-dark mx-2">
+          <div class="box border border-white mx-2 text-white">border-white</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <h3>radius 사용하기</h3>
+    <div class="d-flex">
+      <div class="box bg-secondary mx-2">rounded 미적용</div>
+      <div class="box rounded bg-secondary mx-2">기본 rounded</div>
+      <div class="box rounded-top bg-secondary mx-2">rounded-top</div>
+      <div class="box rounded-bottom bg-secondary mx-2">rounded-bottom</div>
+      <div class="box rounded-start bg-secondary mx-2">rounded-start</div>
+      <div class="box rounded-end bg-secondary mx-2">rounded-end</div>
+      <div class="box rounded-circle bg-secondary mx-2">rounded-circle</div>
+      <div class="box rounded-pill bg-secondary mx-2" style="width: 200px;">rounded-pill</div>
+    </div>
+    <br>
+    <div class="d-flex">
+      <div class="box rounded-0 bg-secondary mx-2">rounded-0</div>
+      <div class="box rounded-1 bg-secondary mx-2">rounded-1</div>
+      <div class="box rounded-2 bg-secondary mx-2">rounded-2</div>
+      <div class="box rounded-3 bg-secondary mx-2">rounded-3</div>
+      <div class="box rounded-4 bg-secondary mx-2">rounded-4</div>
+      <div class="box rounded-5 bg-secondary mx-2">rounded-5</div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <h3>float 사용</h3>
+    <div class="clearfix">
+      <div class="box bg-danger float-start"></div>
+      <div class="box bg-success float-start"></div>
+      <div class="box bg-primary float-start"></div>
+      <div class="box bg-info float-end"></div>
+      <div class="box bg-secondary float-end"></div>
+      <div class="box bg-warning float-end"></div>
+    </div>
+
+    <br>
+
+    <div class="clearfix">
+      <div class="box bg-primary float-sm-end"></div>
+      <div class="box bg-secondary float-md-end"></div>
+      <div class="box bg-success float-lg-end"></div>
+      <div class="box bg-info float-xl-end"></div>
+      <div class="box bg-warning float-xxl-end"></div>
+      <div class="box bg-danger float-none"></div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container my-4">
+    <h3>visibility 사용</h3>
+    <div>
+      <div class="box bg-primary mx-2 invisible"></div>
+      <div class="box bg-success mx-2 visible"></div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <h3>width, height 사용</h3>
+    <div class="border bg-secondary p-3" style="width: 500px;">
+      <div class="bg-warning w-25 my-1">w-25</div>
+      <div class="bg-warning w-50 my-1">w-50</div>
+      <div class="bg-warning w-75 my-1">w-75</div>
+      <div class="bg-warning w-100 my-1">w-100</div>
+      <div class="bg-warning w-auto my-1">w-auto</div>
+      <div class="bg-warning mw-100 my-1">mw-100</div>
+    </div>
+
+    <br>
+
+    <div class="border bg-secondary p-3" style="height: 300px; width: 500px;">
+      <div class="bg-warning d-inline-block mx-1 h-25">h-25</div>
+      <div class="bg-warning d-inline-block mx-1 h-50">h-50</div>
+      <div class="bg-warning d-inline-block mx-1 h-75">h-75</div>
+      <div class="bg-warning d-inline-block mx-1 h-100">h-100</div>
+      <div class="bg-warning d-inline-block mx-1 h-auto">h-auto</div>
+      <div class="bg-warning d-inline-block mx-1 mh-100" style="height: 500px;">mh-100</div>
+    </div>
+
+    <br>
+
+    <div class="container my-4">
+      <h3>shadow 사용</h3>
+      <div class="d-flex">
+        <div class="box p-3 m-4 bg-light shadow-none">shadow-none</div>
+        <div class="box p-3 m-4 bg-white shadow-sm">shadow-sm</div>
+        <div class="box p-3 m-4 bg-white shadow">shadow</div>
+        <div class="box p-3 m-4 bg-white shadow-lg">shadow-lg</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <h3>종횡비 설정</h3>
+
+    <h4>1 : 1</h4>
+    <div class="ratio ratio-1x1">
+      <iframe src="https://www.youtube.com/embed/9gYyNZi1QoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <br>
+    <h4>4: 3</h4>
+    <div class="ratio ratio-4x3">
+      <iframe src="https://www.youtube.com/embed/9gYyNZi1QoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <br>
+    <h4>16 : 9</h4>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.youtube.com/embed/9gYyNZi1QoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <br>
+    <h4>21 : 9</h4>
+    <div class="ratio ratio-21x9">
+      <iframe src="https://www.youtube.com/embed/9gYyNZi1QoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container my-4">
+    <h3>x 버튼 icon</h3>
+    <div>
+      <button type="button" class="btn btn-primary me-2">기본 부트스트랩 버튼</button>
+      <button type="button" class="btn-close"></button>
+    </div>
+  </div>
+</body>
+</html>

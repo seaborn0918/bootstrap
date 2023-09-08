@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>헤더</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  <style>
+    header {
+      width: 100%;
+      height: 700px;
+      background-image: url(../resource/images/cafe001.jpg) ;
+      background-size: cover;
+      background-position: 50% 50%;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .bottom-left {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+    }
+
+    .bottom-right {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+    
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="bottom-left">
+      <p class="text-bg-dark text-white">Open from 6am to 5pm</p>
+    </div>
+
+    <div class="bottom-right">
+    <p class="text-white">15 Adr street, 5015</p>
+    </div>
+
+    <div class="centered">
+      <p class="text-white display-1">the</p>
+      <p class="text-white display-1">Cafe</p>
+    </div>
+  </header>
+  
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Pricing Tables</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  <style>
+    .price {
+      font-size: 2em;
+      letter-spacing: 3px;
+    }
+
+    .card:hover {
+      box-shadow: 0 5px 15px gray;
+    }
+
+    .card-footer > .btn:hover {
+      border: 1px solid #c6c6c6;
+      background-color: #c6c6c6;
+      color: black;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="h2 my-3">Responsive Pricing Tables</div>
+    <div class="row">
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-header bg-dark text-white text-center">
+            <h3 class="p-4">Basic</h3>
+          </div>
+          <ul class="list-group text-center">
+            <li class="list-group-item p-3"><span class="fw-bold">10GB</span> Storage</li>
+            <li class="list-group-item p-3"><span class="fw-bold">10</span> Emails</li>
+            <li class="list-group-item p-3"><span class="fw-bold">10</span> Domains</li>
+            <li class="list-group-item p-3"><span class="fw-bold">Endless</span> Support</li>
+            <li class="list-group-item p-4"><span class="price">$ 10</span><span class="text-secondary d-block mt-2">per month</span></li>
+          </ul>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-success m-3 px-4 py-3 rounded-0">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-header bg-success text-white text-center">
+            <h3 class="p-4">Pro</h3>
+          </div>
+          <ul class="list-group text-center">
+            <li class="list-group-item p-3"><span class="fw-bold">25GB</span> Storage</li>
+            <li class="list-group-item p-3"><span class="fw-bold">25</span> Emails</li>
+            <li class="list-group-item p-3"><span class="fw-bold">2</span> Domains</li>
+            <li class="list-group-item p-3"><span class="fw-bold">Endless</span> Support</li>
+            <li class="list-group-item p-4"><span class="price">$ 25</span><spanc class="text-secondary d-block mt-2">per month</li>
+          </ul>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-success m-3 px-4 py-3 rounded-0">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-header bg-dark text-white text-center">
+            <h3 class="p-4">Premium</h3>
+          </div>
+          <ul class="list-group text-center">
+            <li class="list-group-item p-3"><span class="fw-bold">50GB</span> Storage</li>
+            <li class="list-group-item p-3"><span class="fw-bold">50</span> Emails</li>
+            <li class="list-group-item p-3"><span class="fw-bold">50</span> Domains</li>
+            <li class="list-group-item p-3"><span class="fw-bold">Endless</span> Support</li>
+            <li class="list-group-item p-4"><span class="price">$ 50</span><span class="text-secondary d-block mt-2">per month</span></li>
+          </ul>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-success m-3 px-4 py-3 rounded-0">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

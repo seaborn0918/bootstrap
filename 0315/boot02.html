@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 5일차 2번</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  <!-- 스크롤 스파이 : 현재 스크롤 영역의 위치에 따라서 내비게이션 바의 활성하 위치가 변경되는 UI -->
+  <!-- body 태그의 position 속성을 relative로 설정 -->
+  <!-- body 태그에 사용자 속성 data-bs-spy="scroll", data-bs-target="내비게이션 바의 클래스", data-bs-offset="50"으로 설정 -->
+  <!-- 내비게이션 바에 .fixed-top을 사용하여 상단 고정 -->
+  <!-- 화면 영역을 설정하고 해당 화면 영역에 id값을 반드시 설정-->
+  <style>
+    body {
+      position: relative;
+    }
+
+    .box {
+      padding: 100px 20px;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-fiar" data-bs-offset="50">
+  <nav class="navbar navbar-expand-md bg-warning fixed-top">
+    <div class="container-fluid">
+      <a href="#section1" class="navbar-brand">Logo</a>
+      <ul class="navbar-nav me-auto ">
+        <li class="nav-item"><a href="#section1" class="nav-link">Section1</a></li>
+        <li class="nav-item"><a href="#section2" class="nav-link">Section2</a></li>
+        <li class="nav-item"><a href="#section3" class="nav-link">Section3</a></li>
+        <li class="nav-item"><a href="#section4" class="nav-link">Section4</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="section1" class="container-fluid bg-primary text-white box">
+    <h1>Section1</h1>
+    <p>내비게이션 바의 메뉴 클릭 시 화면이 이동 됨</p>
+    <p>마우스 스크롤 시 내비게이션 바의 메뉴가 따라옴</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, laborum asperiores voluptate quis eligendi voluptates, natus cum iure minima aut nam accusantium distinctio quibusdam similique saepe, cumque nihil impedit corporis!</p>
+  </div>
+  <div id="section2" class="container-fluid bg-success text-white box">
+    <h1>Section2</h1>
+    <p>내비게이션 바의 메뉴 클릭 시 화면이 이동 됨</p>
+    <p>마우스 스크롤 시 내비게이션 바의 메뉴가 따라옴</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, laborum asperiores voluptate quis eligendi voluptates, natus cum iure minima aut nam accusantium distinctio quibusdam similique saepe, cumque nihil impedit corporis!</p>
+  </div>
+  <div id="section3" class="container-fluid bg-info text-white box">
+    <h1>Section3</h1>
+    <p>내비게이션 바의 메뉴 클릭 시 화면이 이동 됨</p>
+    <p>마우스 스크롤 시 내비게이션 바의 메뉴가 따라옴</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, laborum asperiores voluptate quis eligendi voluptates, natus cum iure minima aut nam accusantium distinctio quibusdam similique saepe, cumque nihil impedit corporis!</p>
+  </div>
+  <div id="section4" class="container-fluid bg-secondary text-white box">
+    <h1>Section4</h1>
+    <p>내비게이션 바의 메뉴 클릭 시 화면이 이동 됨</p>
+    <p>마우스 스크롤 시 내비게이션 바의 메뉴가 따라옴</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, laborum asperiores voluptate quis eligendi voluptates, natus cum iure minima aut nam accusantium distinctio quibusdam similique saepe, cumque nihil impedit corporis!</p>
+  </div>
+
+</body>
+</html>

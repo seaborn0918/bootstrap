@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다시 해보기</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <h1>form 사용하기</h1>
+    <h2>- 부트스트랩의 input과 textarea</h2>
+    <div>
+      <div class="my-3">
+        <label for="user-id" class="form-label">사용자 ID</label>
+        <input type="text" class="form-control" id="user-id" placeholder="ID를 입력하세요">
+      </div>
+      <div class="my-3">
+        <label for="comment1" class="form-label">textarea</label>
+        <textarea name="comment1" id="comment1" cols="30" rows="3" class="form-control"></textarea>
+      </div>
+    </div>
+
+    <br><hr><br>
+
+    <h1>부트스트랩의 form을 이용한 로그인 페이지 예제</h1>
+    <!-- 총 네박스 -->
+    <!-- 1. 아이디 input -->
+    <!-- 2. 비밀번호 input -->
+    <!-- 3. remeber me 체크박스 -->
+    <!-- 4. 로그인, 회원가입 버튼(col 안에 세로로 한 묶음) -->
+    <br>
+    <div class="row">
+      <div class="col-5 mx-auto border rounded">
+        <form>
+          <div class="my-3">
+            <label for="user-email" class="form-label">아아디(이메일)</label>
+            <input type="email" id="user-email" class="form-control" placeholder="email 주소를 입력하세요">
+          </div>
+          <div class="my-3">
+            <label for="user-pw" class="form-label">비밀번호</label>
+            <input type="password" id="user-pw" class="form-control" placeholder="비밀번호를 입력하세요">
+          </div>
+          <!-- 체크박스를 만들땐 부모태그에 form-check 클래스로 감싸기 -->
+          <div class="my-3 form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="remever">Remember Me
+            </label>
+          </div>
+          <!-- gap 속성 : 행과 열 사이의 간격 -->
+          <div class="my-3 d-grid gap-2">
+            <button type="submit" class="btn btn-primary">로그인</button>
+            <button type="button" class="btn btn-secondary">회원가입</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <br><hr><br>
+
+    <div>
+      <h1>inline 방식 form 사용</h1>
+        <form>
+          <div class="row border rounded py-3">
+            <div class="col-4">
+              <input type="text" class="form-control" placeholder="email">
+            </div>
+            <div class="col-4">
+              <input type="password" class="form-control" placeholder="비밀번호">
+            </div>
+            <!-- 인라인 방식이므로 col을 분리해 각각의 박스로 -->
+            <div class="col-2 d-grid">
+              <button type="submit" class="btn btn-primary">로그인</button>
+            </div>
+            <div class="col-2 d-grid">
+              <button type="button" class="btn btn-secondary">회원가입</button>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+      <h1>disabled, readonly, plaintext</h1>
+      <div>
+        <input type="text" class="form-control" placeholder="disabled 상태" disabled>
+        <input type="text" class="form-control" placeholder="readonly 상태" readonly>
+        <input type="text" class="form-control-plaintext" placeholder="plaintext는 클래스">
+      </div>
+    </div>
+
+    <br><hr><br>
+
+
+  </div>
+  
+</body>
+</html>

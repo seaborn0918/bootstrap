@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 4일차 1번</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+  <div class="container my-4">
+    <h3>Button Group</h3>
+    <!-- Button Group : 부트스트랩에서 지원하는 여러 개의 버튼을 하나의 버튼인 것처럼 붙여 표현하는 것 -->
+    <!-- 기본 버튼은 버튼을 여러 개 나열하면 중간에 여백이 존재함 -->
+    <!-- Button Group 사용 시 여백이 없음 -->
+    <!-- 부모 태그에 .btn-group 클래스를 사용하고 자식 태그로 버튼을 사용-->
+    <div>
+      <h4>기본 버튼 3개</h4>
+      <div>
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+      </div>
+      <br>
+      <!-- 메뉴 버튼처럼 사용 가능 -->
+      <h4>Button Group 사용 버튼 3개</h4>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <button type="button" class="btn btn-primary">Sony</button>
+      </div>
+    </div>
+    <br>
+    <h3>세로 방향 Button Group</h3>
+    <!-- 부모 태그에 .btn-group 대신 .btn-group-vertical 클래스 사용 -->
+    <!-- 사이드바 메뉴처럼 사용 가능 -->
+    <div class="btn-group-vertical">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <br><br>
+    <h3>Button Group 크기 설정</h3>
+    <!-- 부모 태그에 .btn-group-sm, .nbyn-group-lg 추가 -->
+    <!-- 버튼 그룹은 기본적으로 inline 타입임 -->
+    <div class="btn-group btn-group-lg">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-primary">Apple</button>
+      <button type="button" class="btn btn-primary">Samsung</button>
+      <button type="button" class="btn btn-primary">Sony</button>
+    </div>
+    <br><br>
+    <h3>버튼 그룹과 Dropdown Button</h3>
+    <!-- 버튼 그룹 멤버에 Dropdown Button 사용할 수 있음 -->
+    <div>
+      <div class="btn-group">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="dropdown-item">Tablet</a></li>
+            <li><a href="#" class="dropdown-item">SmartPhone</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container my-4">
+    <h3>Dropdown</h3>
+    <!-- Dropdown : 일반 버튼 클릭 시 추가 메뉴가 나오는 형태의 버튼 -->
+    <!-- 부모 태그에 .dropdown 클래스를 사용하고 자식 태그로 button 태그 및 ul 태그를 사용함 -->
+    <!-- button에 .dropdown-toggle 클래스와 사용자 속성인 data-bs-toggle="dropdown"을 사용 -->
+    <!-- ul 태그에 .dropdown-menu클래스를 사용하고, 조손 태그 중 a 태그에 .dropdown-item 클래스를 사용 -->
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+      </ul>
+    </div>
+    <br>
+    <h4>드랍다운 버튼의 구분선, header, 단순 text</h4>
+    <!-- 드랍다운 버튼에서 li태그의 자식태그로 hr 태그를 사용하고 .dropdown-divider 클래스를 사용 시 메뉴 구분선으로 사용할 수 있음 -->
+    <!-- 드랍다운 버튼에서 li태그의 자식태그로 문자 태그를 사용하고 .dropdown-header 클래스를 사용 시 메뉴의 header로 사용할 수 있음 -->
+    <!-- 드랍다운 버튼에서 li태그의 자식태그로 -span 태그를 사용하고 .dropdown-item-text 클래스를 사용 시 메뉴로서의 기능이 없는 일반 text로 표현할 수 있음 -->
+    <h5>구분선</h5>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 4</a></li>
+      </ul>
+    </div>
+    <br>
+    <h5>header</h5>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+      <ul class="dropdown-menu">
+        <li><h5 class="dropdown-header">header1</h5></li>
+        <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><h5 class="dropdown-header">header2</h5></li>
+        <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 4</a></li>
+      </ul>
+    </div>
+    <br>
+    <h5>text</h5>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+      <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+        <li><a href="#" class="dropdown-item">메뉴 4</a></li>
+        <li><span class="dropdown-item-text">그냥 글자임</span></li>
+      </ul>
+    </div>
+    <br>
+    <h4>드랍다운 메뉴의 active, disabled</h4>
+    <!-- li 태그의 자식 태그인 a 태그에 .active 나 .disabled 클래스를 사용하면 활성/비활성 버튼으로 표현됨 -->
+    <div>
+      <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+          <li><a href="#" class="dropdown-item active">메뉴 2</a></li>
+          <li><a href="#" class="dropdown-item disabled">메뉴 3</a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <h4>드랍 다운 버튼의 서브 메튜 출력 방향 설정</h4>
+    <!-- 부모 태그의 클래스에 .dropstart, .dropend 추가 시 서브 메뉴의 출력 위치를 버튼 왼쪽, 오른족으로 출력할 수 있음 -->
+    <!-- 부모 태그의 클래스에 .dropdown-menu-end 추가 시 서브 메뉴의 출력 위치를 오른쪽으로 변경할 수 있음 -->
+    <!-- 부모 태그의 클래스를 .dropdown 대신 .dropup 사용 시 서브 메뉴가 상단에 출력됨-->
+    <div>
+      <div class="dropdown dropstart">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼 왼쪽 출력</button>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="dropdown dropend">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼 오른쪽 출력</button>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="dropdown dropdown-menu-end">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼 서브 메뉴 출력을 오른쪽 정렬</button>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="dropup">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼 상단 출력</button>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">메뉴 1</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 2</a></li>
+          <li><a href="#" class="dropdown-item">메뉴 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container my-4">
+    <h3>Collapsible</h3>
+    <!-- Collapse : 부트스트랩에서 자바스크립트와 CSS를 연동하여 미리 만들어 놓은 화면 접기 기능 -->
+    <!-- 보통 버튼에 기능을 추가하여 특정 영역을 접어서 숨겼다가 보여주는 역할을 함 -->
+    <!-- button 태그에 사용자 속성인 data-bs-toggle="collapse"를 사용, data-bs-target="#숨겨지는 영역의 id값"을 설정 -->
+    <!-- div 태그로 숨겨질 영역 설정하고 id값을 입력, .collapse 클래스를 사용 -->
+    <!-- div 태그는기본적으로 영역이 숨겨져 있으며, 기본적으로 영역을 표시하려면 .show 클래스를 추가 -->
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#mydiv1">숨겼다보이기</button>
+      <div id="mydiv1" class="collapse">
+        <h4>버튼 클릭 시 숨겨지는 영역</h4>
+        <p>collapse로 설정되어 클릭 시 숨겨짐</p>
+      </div>
+      <div class="mt-2">
+        <button type="button" class="btn btn-success">위의 영역이 숨겨지는지 확인하기 위한 태그</button>
+      </div>
+    </div>
+    <br>
+    <h4>a 태그에 collapse 적용</h4>
+    <!-- a태그를 사용하여 collapse 버튼을 적용할 수 있음 -->
+    <!-- a태그의 href 속성에 숨겨질 영역의 id값을 설정, 사용자 속성인 data-bs-target은 사용하지 않음-->
+    <!-- a태그에 사용자 속성인 data-bs-toggle="collapse"를 추가, 나머지는 button 사용시와 동일 -->
+    <div>
+      <a href="#mydiv2" data-bs-toggle="collapse" class="btn btn-outline-primary">숨겼다보이기</a>
+      <div class="collapse show" id="mydiv2">
+        <h4>a 태그로 collpase 적용하기</h4>
+        <p>숨겨졌다가 보였다가 하는 영역</p>
+        <p>.show 사용 시 기본적으로 보이는 영역</p>
+      </div>
+    </div>
+    <br>
+    <h4>아코디언 사용하기</h4>
+    <!--  accordion : collapse 기능을 사용하여 여러 개의 지정된 영역 중 한 곳만 열어서 내용을 표시하고 다른 곳을 클릭 시 기존 영역을 닫고 새로운 영역을 여는 디자인 방식 -->
+    <!-- 부모 div에 .accordion 클래스를 사용 -->
+    <!-- 자식 div로 .card를 사용하여 여러 개의 영역을 지정함 -->
+    <!-- .card를 사용한 div의 자식 태그로 클릭 시 반응할 header 영역과 내용이 표시되는 영역을 2개 생성함-->
+    <!-- header 영역에 a태그를 사용하여 내용이 표시되는 영역의 id값을 설정 -->
+    <!-- 내용이 표시되는 영역에 사용자 속성인 data-bs-parent="#accordion"을 설정 -->
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a href="#mycollapse1" data-bs-toggle="collapse" class="btn">클릭시 열리는 영역 1</a>
+        </div>
+        <div id="mycollapse1" class="collapse show" data-bs-parent="#accordion">
+          <div class="card-body">
+            <h4>영역 1</h4>
+            <p>아코디언을 사용하여 클릭 시 열리는 영역 1</p>
+            <p>다른 영역 제목을 클릭 시 해당 영역은 닫힘</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a href="#mycollapse2" data-bs-toggle="collapse" class="btn collapsed">클릭시 열리는 영역 2</a>
+        </div>
+        <div id="mycollapse2" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <h4>영역 2</h4>
+            <p>아코디언을 사용하여 클릭 시 열리는 영역 2</p>
+            <p>다른 영역 제목을 클릭 시 해당 영역은 닫힘</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a href="#mycollapse3" data-bs-toggle="collapse" class="btn collapsed">클릭시 열리는 영역 3</a>
+        </div>
+        <div id="mycollapse3" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <h4>영역 3</h4>
+            <p>아코디언을 사용하여 클릭 시 열리는 영역 3</p>
+            <p>다른 영역 제목을 클릭 시 해당 영역은 닫힘</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container my-4">
+    <h3>list Group</h3>
+    <!-- list group : 부트스트랩에서 미리 디자인해 놓은 ul 태그의 디자인 -->
+    <!-- ul 태그에 .list-group 클래스를 추가, li 태그에 .list-group-item 클래스를 추가하여 사용 -->
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item">목록 1</li>
+        <li class="list-group-item">목록 2</li>
+        <li class="list-group-item">목록 3</li>
+      </ul>
+    </div>
+    <br>
+    <h4>active, disabled</h4>
+    <!-- li 태그에 .active/.disabled 클래스를 추가 시 활성/비활성된 리스트 목록을 사용할 수 있음 -->
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item">목록 1</li>
+        <li class="list-group-item active">목록 2</li>
+        <li class="list-group-item disabled">목록 3</li>
+      </ul>
+    </div>
+    <br>
+    <h4>a태그를 사용한 리스트 그룹</h4>
+    <!-- ul 태그가 아닌 div 태그에 .list-group 클래스를 사용하고, li 태그가 아닌 a 태그에 .list-group-item .list-group-item-action 클래스를 추가하여 사용할 수 있음 -->
+    <div>
+      <div class="list-group">
+        <a href="" class="list-group-item list-group-item-action">a 태그 목록 1</a>
+        <a href="" class="list-group-item list-group-item-action">a 태그 목록 2</a>
+        <a href="" class="list-group-item list-group-item-action">a 태그 목록 3</a>
+      </div>
+    </div>
+    <br>
+    <h4>테마 색상 사용하기</h4>
+    <!-- li 태그에 .list-group-item-테마색상명 클래스 사용 시 테마 색상을 사용할 수 있음 -->
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-primary">primary</li>
+        <li class="list-group-item list-group-item-secondary">secondary</li>
+        <li class="list-group-item list-group-item-success">success</li>
+        <li class="list-group-item list-group-item-info">info</li>
+        <li class="list-group-item list-group-item-warning">warning</li>
+        <li class="list-group-item list-group-item-danger">danger</li>
+        <li class="list-group-item list-group-item-light">light</li>
+        <li class="list-group-item list-group-item-dark">dark</li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="container my-4">
+    <h3>pagination</h3>
+    <!-- 게시판에서 다음 페이지 및 여러 개의 페이지를 표시하기 위한 부분을 부트스트랩에서 미리 디자인함 -->
+    <!-- ul 태그에 .pagination 클래스를 사용 -->
+    <!-- li 태그에 .page-item 클래스를 사용 -->
+    <!-- a 태그에 .page-link 클래스를 사용 -->
+    <!-- active/disabled 사용 시 li 태그에 .active/.disabled 클래스를 사용함 -->
+    <!-- 크기 설정을 위해서 ul 태그에 .pagination-sm, .pagination-lg를 추가하여 사용 -->
+    <!-- 정렬을 위해서 ul 태그에 .jutify-content-start, .justify-content-center, .justify-content-end 클래스를 추가하여 사용 -->
+    <div>
+      <ul class="pagination">
+        <li class="page-item"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+    </div>
+    <br>
+    <div>
+      <ul class="pagination">
+        <li class="page-item disabled"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+    </div>
+    <br>
+    <div>
+      <ul class="pagination pagination-lg">
+        <li class="page-item disabled"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+      <ul class="pagination pagination">
+        <li class="page-item disabled"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+      <ul class="pagination pagination-sm">
+        <li class="page-item disabled"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="pagination">
+        <li class="page-item disabled"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+      <ul class="pagination justify-content-end">
+        <li class="page-item disabled"><a href="#" class="page-link">이전</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">다음</a></li>
+      </ul>
+    </div>
+    <br>
+    <h4>breadcrumb</h4>
+    <!-- breadcrumb : 웹페이지 중 현재 페이지의 위치가 어딘지 알려주는 목적으로 사용하는 클래스 -->
+    <!-- ul 태그에 .breadcrumb 클래스를 사용하고 li 태그에 .breadcrum-item 클래스를 사용함 -->
+    <div>
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="">Photo</a></li>
+        <li class="breadcrumb-item"><a href="">2021</a></li>
+        <li class="breadcrumb-item"><a href="">Busan</a></li>
+        <li class="breadcrumb-item active">Haeundae</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

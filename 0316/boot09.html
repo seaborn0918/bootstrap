@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모달 예제</title>
+  <link rel="stylesheet" href="../resource/css/bootstrap.css">
+  <script src="../resource/js/bootstrap.bundle.js"></script>
+  <!-- https://www.w3schools.com/w3css/tryw3css_examples_modal_login.htm -->
+</head>
+<body>
+  <div class="container-fluid my-3">
+    <h2>W3.CSS Login Modal</h2>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+    <!-- 모달창 -->
+    <div class="modal fade" id="login">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img src="../resource/images/avatar.png" alt="" class="rounded-circle d-block mx-auto mb-2" style="width: 145px; height: 145px;">
+            <form action="">
+              <label for="user-name" class="form-label fw-bold">Username</label>
+              <input type="text" class="form-control mb-2" placeholder="Enter Username" id="user-name" name="user-name">
+              <label for="user-pw" class="form-label fw-bold">Password</label>
+              <input type="password" class="form-control mb-3" placeholder="Enter Password" id="user-pw" name="user-pw">
+              <div class="d-grid mb-4">
+                <button type="submit" class="btn btn-success">Login</button>
+              </div>
+              <input type="checkbox" class="form-check-input" id="remeber">
+              <label for="remember" class="form-check-label">Remember me</label>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+            <p>Forgot <a href="#">password?</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
